@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="landing.css" />
     <link rel="icon" href="images/z.jpg" />
 
-    <title>Login to the Microblog Network!</title>
+    <title>Sign in to the Microblog Network!</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="./auth.js"></script>
@@ -35,25 +35,23 @@
     </script>
   </head>
   <body>
-    <header>
-      <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
-    </header>
-
-    <main class=>
-      <form id="login">
-        <img src="images/z.jpg" alt="#" width="75" height="75"/>
+    <main class="container">
+      <h4 class="mb-4 pb-3">Sign up</h4>
+      <form id="signupForm">
         <div>
-          <label for="username">Username</label>
-          <input type="text" id="username" minlength="3" />
+          <input type="text" id="fullName" placeholder="Full Name" required />
         </div>
-
         <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" minlength="6" />
+          <input type="text" id="username" placeholder="Username" required />
         </div>
-
-        <button id="loginButton" type="submit">Login</button>
-        <p class="mb-0 mt-4 text-center"><a href="sign-in.html" class="link">Creat an account</a></p>
+        <div>
+          <input type="email" id="email" placeholder="Email" required />
+          <!-- Positioned at the left of the input field -->
+        </div>
+        <div>
+          <input type="password" id="password" placeholder="Password" required />
+        </div>
+        <button type="submit">Signup</button>
         <button
           class="bg-[linear-gradient(#e9e9e9,#e9e9e9_50%,#fff)] group w-50 h-16 inline-flex transition-all duration-300 overflow-visible p-1 rounded-full group"
         >
@@ -102,6 +100,6 @@
     <footer></footer>
 
     <!-- Page-specific code -->
-    <script src="landing.js"></script>
+    <script src="sign-in.js"></script>
   </body>
 </html>
