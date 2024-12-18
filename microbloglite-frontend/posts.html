@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/z.jpg" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -14,6 +13,8 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -32,19 +33,76 @@
     <script src="auth.js"></script>
     <script>
       // If the user is NOT logged in, redirect back to the landing page (index.html)
-      // if (isLoggedIn() === false) window.location.replace("/");
+      if (isLoggedIn() === false) window.location.replace("/");
     </script>
   </head>
-  <body>
-    <header>
-      <h1>POSTS PAGE</h1>
-    </header>
+  <body class="bg-primary">
+    <div class="sidebar">
+      <div class="sidebarOption active">
+        <i class="uil uil-estate"></i>
+        <h2>Home</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-search"></i>
+        <h2>Explore</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-bell"></i>
+        <h2>Notifications</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-envelope"></i>
+        <h2>Messages</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-bookmark"></i>
+        <h2>Bookmarks</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-user-circle"></i>
+        <h2>Profile</h2>
+      </div>
+      <div class="sidebarOption" id="logoutButton">
+        <i class="uil uil-sign-out-alt"></i>
+        <h2>Logout</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-ellipsis-h"></i>
+        <h2>More</h2>
+      </div>
+      <button class="sidebar_tweet">New Post</button>
+    </div>
 
-    <main><img src="images/z.jpg" alt="#" width="300" height="300"></main>
+    <!-- Feed -->
+    <div class="feed">
+
+      <div class="tweetBox">
+        <form id="tweetForm">
+          <div class="tweetbox_input mt-2 mb-5">
+            <input type="text" id="tweetText" placeholder="What's up?" />
+          </div>
+          <div class="tweetbox_icons">
+            <i class="uil uil-image"></i>
+            <i class="uil uil-smile"></i>
+            <i class="uil uil-film"></i>
+
+            <button type="submit" class="tweetBox_tweetButton">Post</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sample Post -->
+      <div id="postList"></div>
+    </div>
+    <div class="widgets">
+      <div class="widgets__input">
+        <i class="uil uil-search searchWidget"></i>
+        <input type="text" placeholder="Search" />
+      </div>
+    <main></main>
 
     <footer></footer>
 
-    <!-- Page-specific code -->
     <script src="posts.js"></script>
   </body>
 </html>
