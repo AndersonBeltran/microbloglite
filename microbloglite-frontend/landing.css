@@ -10,7 +10,7 @@ form {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background: #181818;
+  background: #00000000;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgb(255, 255, 255);
 }
@@ -30,6 +30,7 @@ button {
   border: 1px solid #000000;
   border-radius: 5px;
   box-sizing: border-box;
+  box-shadow: 0 1px 1px rgb(255, 255, 255);
 }
 
 button {
@@ -50,23 +51,6 @@ button {
 button:hover {
   background-color: #000000;
   transform: scale(1.05);
-  box-shadow: 0 2px 4px rgb(255, 255, 255);
-}
-
-@media (max-width: 600px) {
-  form {
-    padding: 10px;
-  }
-
-  input,
-  select,
-  button {
-    padding: 8px;
-  }
-}
-
-h1 {
-  text-align: center;
-  margin-top: 20px;
+  box-shadow: 0 3px 5px rgb(255, 255, 255);
 }
 
